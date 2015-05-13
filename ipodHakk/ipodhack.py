@@ -9,6 +9,10 @@ args = parser.parse_args()
 
 for root, dirs, files in os.walk(args.source):
 	for g in files:
-            #print(g)
-
+            tag = t.get(os.path.join(os.path.abspath(root), g))
+            if not tag.artist is None:
+                #print(os.path.join(args.target, tag.artist, tag.album))
+                #if not os.path.exists(os.path.join(args.target, tag.artist)):
+                #    os.makedirs(os.path.join(args.target, tag.artist, tag.album))
+                #os.rename(os.path.join(os.path.abspath(root),g), os.path.join(args.target, tag.artist, tag.album, tag.title))
 
